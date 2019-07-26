@@ -1,1 +1,62 @@
-Fri Jul 26 07:52:58 PDT 2019
+##CHAPTER 6 NOTES
+#environments are another type of variable (cannot be manipulated directly though)
+#when you assign a variable in command prompt it goes to global environment (AKA user workspace)
+#get a new environment: 
+an_environment<- new.env()
+
+#assigning a variable to an environment: 
+an_environment[["pythag"]]<- c(12,15,20,21)
+
+#retrieve a variable from an environment: 
+get("pythag", an_environment)
+
+#list the variables in that are in the environment 
+ls(envir=an_environment)
+
+#or list the variables and their contents in the environment: 
+ls.str(envir = an_environment)
+
+#see if a  variable  in a specific environment: 
+exists("pythag", an_environment)
+
+#make the environment into a list 
+as.list(an_environment) 
+#vice versa: list2env()
+
+
+#functions: "inputs" are known as the parameters (or arguments)
+#body of the function= in between the curly brackets 
+hypotenuse<- function(x,y)
+  { 
+    sqrt(x^2 + y^2)
+  }
+
+#another form: 
+hypotenuse<- function(x,y) sqrt(x^2 + y^2)
+
+hypotenuse(3,4)
+
+#do.call- it allows us to fill in the parameters of a function one at a time 
+
+##Quiz 
+#1. What's another name for global environment? user workspace 
+#2 How would you convert a list to an environment? list2env()
+#3 How do you print the contents of a function to the console? You just type the function's name
+#4 Name three functions that tell you the names of the formal arguments of a function. print(), paste(),list()
+#5 What does the do.call function do? letting us pass the arguments as a list
+
+
+##Exercise 6.1
+multiples_of_pi<- new.env()
+
+multiples_of_pi[["two_pi"]]<- 2*n
+multiples_of_pi$three_pi<- 3*n
+assign("four_pi", 4*n, multiples_of_pi)
+
+ls.str(envir = multiples_of_pi)
+
+##Exercise 6.2 
+checkIfEven<- function(n) (n%%2)==0 
+checkIfEven(c(3, 7, 2, NA))
+
+##Exercise 6.3 - maybe we can go over this on Monday? 
