@@ -58,30 +58,27 @@ paste(rep("cat", 5), collapse="")
 #To create a repository for R, click the green button “New” when you go into “your repositories” tab. 
 #Make sure to make a repository name (one that may correlate with a project), 
 #make sure it is public so it can she shared among colleagues and mentors, and add a “gitignore” and scroll down 
-(or search for) R so it can be cloned into RStudio.
+#(or search for) R so it can be cloned into RStudio.
 
-Terminal Commands (may be in order):
+#Terminal Commands (may be in order):
 
-cd - allows me to go back to home directory “user$”. To get into the “GitHub” directory, do “cd github” from the home directory.
+#cd - allows me to go back to home directory “user$”. To get into the “GitHub” directory, do “cd github” from the home directory.
 
-Mkdir “<name of wanted directory>”- allows you to create a directory from whatever directory you are in. Think of it as adding another folder to your binder. Do “cd ‘directory name’ once constructed.
+#Mkdir “<name of wanted directory>”- allows you to create a directory from whatever directory you are in. Think of it as adding another folder to your binder. Do “cd ‘directory name’ once constructed.
 
-git clone “<repository link from GitHub>”- copies the repository into RStudio
+#git clone “<repository link from GitHub>”- copies the repository into RStudio
 
-ls -l -lists whatever is in current directory
+#ls -l -lists whatever is in current directory
 
-pwd- print working directory (usually used to see where you are working at)
+#pwd- print working directory (usually used to see where you are working at)
 
-Cat <file name>- to read a file
+#Cat <file name>- to read a file
 
-Filename1 > filename2 - replacing filename2 with filename 1
-Filename1 >>filename2 - adding on filename1 to filename2
+#Filename1 > filename2 - replacing filename2 with filename 1
+#Filename1 >>filename2 - adding on filename1 to filename2
 
-To push a file on GitHub:
-1. git add <filename>
-2. git commit -m “<give name for file>”
-3. git push
+#To push a file on GitHub: 1. git add <filename> 2. git commit -m “<give name for file>” 3. git push
 
-cp ~/<Path/To/File\ .name.txt> - copy a file into the directory
+#cp ~/<Path/To/File\ .name.txt> - copy a file into the directory
 
-mv filename1.pdf filename2.pdf - move a file to another
+#mv filename1.pdf filename2.pdf - move a file to another
