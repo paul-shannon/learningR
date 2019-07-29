@@ -1,12 +1,15 @@
 #making lists in R 
 x<- list(3,"cat") 
 
-#making a named 
-# pulling off parts from a list needs x[[]] for the contents
-x[["cat"]]
-#get names: 
+#making a named list
+x<- list(number=3,string="cat") 
+
+# pulling off parts from a list needs x[[]] for the contents:
+x[[number]]
+
+#get names of the list: 
 names(x)
-# 
+
 divideBy <- function(dividend, divisor) {
   if (divisor == 0)
     return(NA)
