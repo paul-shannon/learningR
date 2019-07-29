@@ -38,6 +38,12 @@ hypotenuse(3,4)
 
 #do.call- it allows us to fill in the parameters of a function one at a time 
 
+#In R, the last value that is calculated in the function is automatically
+returned. 
+
+#args: returns arguments of a function in a more readable way
+#formalArgs: returns a character vector of the names of the arguments
+
 ##Quiz 
 #1. What's another name for global environment? user workspace 
 #2 How would you convert a list to an environment? list2env()
