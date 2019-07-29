@@ -1,4 +1,4 @@
-##passing functions onto functions
+##passing functions onto functions, using exclamation points 
 #making lists in R 
 x<- list(3,"cat") 
 
@@ -12,6 +12,11 @@ x[[number]]
 names(x)
 
 #library(somePackage) - loads the package, making all of its functions available to use  
+
+#lapply- Apply a Function over a List or Vector.
+
+lapply("cat","dog","goose")
+
 
 divideBy <- function(dividend, divisor) {
   if (divisor == 0)
