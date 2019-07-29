@@ -53,7 +53,7 @@ checkEquals(outer.v1(helloSomebody), formals.of.function)
 
 outer.v2 <- function(func)
 {
-   # put the needed code here
+  return(body(func))
 }
 
 # after you have written that, make sure it passes a test like the following
@@ -72,7 +72,7 @@ checkTrue(any(grepl("hello", body.as.text)))
 
 outer <- function(func)
 {
-   # you write this code
+   list(args= outer.v1(func), body= outer.v2(func))
 }
 
 
