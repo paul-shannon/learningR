@@ -18,11 +18,11 @@ l$x
 l['y'] 
 # New list with only element named y.
 
-install.packages("dplyr")
+install.packages("RUnit")
 #Download and install a package from CRAN.
-library(dplyr)
+library(RUnit)
 #Load the package into the session, making all its functions available to use.
-dplyr::select
+RUnit::select
 #Use a particular function from a package.
 data(iris)
 #Load a build-in dataset into the environment. 
@@ -108,7 +108,7 @@ if (i > 3){
 
 #Practice with making functions and tests
 #format
-function_name <- function(input_variable/parameters){
+function_name <- function(parameters){
   Do_something/body
   return(new_variable)
 }
