@@ -1,1 +1,9 @@
-1.
+#making lists in R 
+x<- list(3,"cat") 
+
+#making a named 
+# pulling off parts from a list needs x[[]] for the contents
+x[["cat"]]
+#get names: 
+names(x)
+# 
