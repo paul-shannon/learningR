@@ -44,6 +44,10 @@ names(x)
 phoneNumber=c(206,123,4567)
 phoneNumber
 
+#difference between a list and vector:
+#a list has heterogenous elements while a vector has homogenous elements
+
+#matrix is a data structure that has homogenous elements
 
 #selecting vector elements
 x[4] 
@@ -104,8 +108,8 @@ if (i > 3){
 
 #Practice with making functions and tests
 #format
-function_name <- function(input_variable){
-  Do_something
+function_name <- function(input_variable/parameters){
+  Do_something/body
   return(new_variable)
 }
 
