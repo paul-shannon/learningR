@@ -70,3 +70,34 @@ result.args <- x[["args"]]
 result.body <- deparse(x[["body"]])
 checkEquals(names(result.args), c("who", "punctuation"))
 checkTrue(grepl("hello", result.body[2]))
+
+#trying another function
+ListOfClass<-function(string)
+{
+  toupper(class(string))
+  FirstThing <- paste(toupper(class(string)))
+  SecondThing <- nchar(string)
+  extra1<- paste(("class of")," ", (string),sep="",(":"))
+  FirstPart<- paste(extra1, FirstThing)
+  extra2<- paste(("number of characters in")," ",(string),sep="", (":"))
+  SecondPart<-paste(extra2,SecondThing)
+  return(paste(FirstPart, sep="   ", SecondPart))
+}
+
+#trying another function
+AddOneThenSquare<-function(x)
+{ 
+  xplusOne<- x+1
+  return(xplusOne*xplusOne)
+}
+
+#trying another function
+reverseAnyString<-function(s)
+{
+  nchar(s)
+  StartingString<-""
+  for(i in nchar(s):1){
+    StartingString<- paste(StartingString,(substr(s,i,i)),sep="")
+  }
+  return(toupper(StartingString))
+}
