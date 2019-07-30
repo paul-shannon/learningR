@@ -87,5 +87,48 @@ levels()
 # the choices in a factor, called levels, will be retrieved
 nlevels()
 # states an integer of how many levels in the factor
+relevel()
+# changes order of factor levels
+unique()
+# same as level function, tells you the factor levels
+droplevels()
+# drops unused factor levels
+order = TRUE
+# orders factor levels
+cut()
+# cuts a numeric variable into pieces, returning a factor
+hist()
+# draws histograms
+#----------------------------------------------------------------------------------------------------------------------
+#Exercise 7-1
+#display the value of pi to 16 sig figs
+formatC(pi, digits= 16)
+
+#Exercise 7-2
+#Split these strings into words, removing any commas or hyphens
+x <- c( "Swan swam over the pond, Swim swan swim!", "Swan swam back again - Well swum swan!")
+strsplit(x, "-", ",")
+strsplit(x, ",? -?")
+strsplit(x, ",? -? ?")
+#third one is correct
+#the other 2 had an empty string from removing the hyphen
+#the 3rd question mark indicates removing spaces
+
+#Exercise 7-3
+#For your role-playing game, each of your adventurer’s character attributes is 
+#calculated as the sum of the scores from three six-sided dice rolls. 
+#To save arm-ache,you decide to use R to generate the scores. Here’s a helper function to generate them:
+
+#n specifies the number of scores to generate.
+#It should be a natural number.
+three_d6 <- function (n)
+  { random_numbers <- matrix( 
+    sample(6, 3 * n, replace = TRUE), 
+    nrow = 3 
+  ) 
+  colSums(random_numbers)
+}
+#Use the three_d6 function to generate 1,000 character attribute scores. 
+#Create atable of the number of scores with different levels of bonus.
 
 
