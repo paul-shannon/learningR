@@ -196,6 +196,14 @@ rm(x)
 rm(list = ls()) 
 #Remove all variables from the environment
 #----------------------------------------------------------------------------------------------------------------------
+#plotting mtcars:
+mtcars
+model <- lm(formula = mpg ~ disp, data = mtcars)
+model
+summary(model)
+plot(mtcars$disp, mtcars$mpg)
+abline(model, col="red")
+#----------------------------------------------------------------------------------------------------------------------
 #Instructions on how to use GitHub using RStudio:
 
 #First, login to Github.
