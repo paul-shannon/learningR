@@ -1,4 +1,5 @@
 ##Chapter 7 Notes##
+##Strings and Factors##
 
 String
 # element of a character vector, indictated by quotations
@@ -100,6 +101,30 @@ cut()
 hist()
 # draws histograms
 #----------------------------------------------------------------------------------------------------------------------
+##Quiz##
+
+#Question 7-1
+# Name as many functions as you can think of for formatting numbers.
+# format, formatC, prettyNum, sprintf
+
+#Question 7-2
+# How might you make your computer beep?
+# can make our computer beep by printing an alarm character, \a , 
+# though the function alarm will do this in a more readable way. 
+# This can be useful to add to the end of a longanalysis to notify you that it’s finished
+
+#   Question 7-3
+# What are the classes of the two types of categorical variable?
+# factor and ordered
+
+#   Question 7-4
+# What happens if you add a value to a factor that isn’t one of the levels?
+# the added value would show up as NA
+
+#   Question 7-5
+# How do you convert a numeric variable to categorical?
+#use the cut function (done in exercise 3)
+#----------------------------------------------------------------------------------------------------------------------
 #Exercise 7-1
 #display the value of pi to 16 sig figs
 formatC(pi, digits= 16)
@@ -128,7 +153,10 @@ three_d6 <- function (n)
   ) 
   colSums(random_numbers)
 }
+
 #Use the three_d6 function to generate 1,000 character attribute scores. 
 #Create atable of the number of scores with different levels of bonus.
 
-
+scores <- three_d6(1000)
+bonuses <- cut(scores, c(2, 3, 4, 6, 9, 13, 16, 18), labels = -3:3) #refer to the table given
+table(bonuses)
