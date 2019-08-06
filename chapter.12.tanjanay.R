@@ -154,17 +154,31 @@ foreign
 # In the extdata folder of the learningr package, there is a file named hafu.csv, containing data on mixed-race manga characters. 
 # Import the data into a data frame.[5]
 hafuFile <- system.file("extdata", "hafu.csv", package = "learningr")
-hafuData <-  read.csv(file)
+hafuData <-  read.csv(hafufile)
 
 # Exercise 12-2
-# Also in the extdata folder of learningr is an Excel file named multi-drug-resistant  gonorrhoea infection.xls.
+# Also in the extdata folder of learningr is an Excel file named multi-drug-resistant gonorrhoea infection.xls.
 # Import the data from the first (and only) sheet into a dataframe. 
 # Hint: this is a little easier if you view the file in a spreadsheet program first. LibreOffice is free and accomplishes this task easily. [10]
 
+#it is in xls format, so library(xlsx) is needed
+install.packages('xlsx') #or
+install.packages('devtools') 
+devtools::install_github('dragua/xlsx')
+library(xlsx)
+library(Runiversal) #maybe this...?
+#okay so I read through the error, turns out Java 1.6 and greater is necessary. This isnt avaible on ISB laptops
+#i still finished the rest of the code, however I cannot run/view it without the package installed
+gonorrhoeaFile <- system.file("extdata", "multi-drug-resistant gonorrhoea infection.xls", package = "learningr")
+gonorrhoeaData <- read.xlsx2( gonorrhoeaFile, sheetIndex = 1)
+head(gonorrhoeaData)
 
 # Exercise 12-3
-# From the crab tag SQLite database described in this chapter, import the contentsof the Daylog table into a data frame. [10]
+# From the crab tag SQLite database described in this chapter, import the contents of the Daylog table into a data frame. [10]
 
-
+library(RSQLite)
+driver <- dbDriver("SQLite")
+databaseFile <- system.file("extdata", "crabtag.sqlite", package = "learningr")
+connection <- dbConnect(driver, databaseFile)
 
 
